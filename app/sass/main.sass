@@ -1,8 +1,5 @@
 @import "bourbon"
-@import "_vars.sass"
-
-//Load Libs SASS
-@import "app/libs/animate/animate.sass"
+@import "vars.sass"
 
 *::-webkit-input-placeholder
 	color: #666
@@ -29,6 +26,475 @@ body textarea:required:valid
 
 //Custom Styles Here
 
-
 //ALWAYS END
+button, input
+	outline: none
+	border: none
 @import "media"
+ul
+	padding: 0
+	margin: 0
+	list-style-type: none
+section
+	min-height: 300px
+	padding: 40px 0
+	.section-title
+		text-align: center
+		max-width: 400px
+		margin: 0 auto
+		h2
+			font-size: 28px
+			color: $main-hover
+			position: relative
+			&:before
+				position: absolute
+				content: ""
+				width: 26px
+				height: 2px
+				background-color: $main
+				bottom: -10px
+				left: 50%
+				margin-left: -13px		
+		.sub-title
+			color: $grey
+			font-size: 16px
+
+.about-block
+	text-align: center
+	padding: 10px 20px
+	margin-top: 25px
+	.icon
+		margin: 20px auto
+		font-size: 50px
+		color: $main
+	h3
+		color: $main-hover
+	p
+		font-size: 14px
+		line-height: 28px
+		color: $grey
+
+#setings
+	position: relative
+	&:before, &:after
+		position: absolute
+		content: ""
+		width: 86%
+		top: 0
+		left: 7%
+		height: 1px
+		background-color: $grey-lyght
+	&:after
+		bottom: 81px
+		top: inherit
+
+	.section-title
+		text-align: left
+		margin-bottom: 50px
+		h2
+			&:before
+				display: none
+.copy,
+#contac
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		width: 86%
+		top: 0
+		left: 7%
+		height: 1px
+		background-color: $grey-lyght
+.uslugi
+	list-style-type: none
+	li
+		margin-bottom: 10px
+		transition: all 0.3s
+		line-height: 40px
+		cursor: pointer
+		i
+			font-size: 17px
+			margin-right: 10px
+			padding: 5px 0 5px 15px
+			vertical-align: middle
+			color: $main
+
+		&:hover
+			background-color: $main
+			color: $white
+			i
+				color: $white
+		&.activ_ser
+			background-color: $main
+			color: $white
+			pointer-events: none
+			cursor: defoult
+			i
+				color: $white
+.tab_container
+	padding-top: 15px	
+	min-height: 660px
+	.tab_item
+		display: none
+		&:first-child
+			display: block		
+		.img-wrap
+			text-align: center
+			img
+				width: 100%
+				max-width: 500px
+
+.phase
+	padding-left: 15px
+	text-align: left
+	.phase_number
+		font-family: fantasy
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		-webki-border-radius: 50%
+		line-height: 50px
+		border: 2px solid $main
+		margin: 10px auto
+		line-height: 45px
+		font-size: 20px
+
+.phase > div
+	display: inline-block
+	vertical-align: top
+	width: 32.5%
+	min-height: 250px
+	text-align: center
+	border-right: 1px solid $grey-lyght
+	&:last-child
+		border: none
+	p
+		padding: 0		
+		margin-bottom: 20px
+.sp-image-container
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: $main
+		opacity: 0.8
+	img
+		z-index: -1
+.balck
+	.section-title
+		h2
+			color: $white
+			&:before
+				background-color: $main-hover
+		p
+			color: $white	
+#slider
+	position: relative
+	.section-title
+		color: #fff
+		position: absolute
+		z-index: 1000
+		left: 50%
+		top: 40px
+		transform: translateX(-50%)
+.sp-slide
+	p
+		box-shadow: 0px 1px 5px #111
+		text-align: center
+		span
+			line-height: 25px
+			font-size: 14px
+		a
+			display: block			
+			width: 150px
+			padding: 5px
+			text-align: center			
+			margin: 10px auto
+			color: $white			
+			transition: all .3s
+			background-color: $main
+#infografika
+	text-align: center
+	.first-sirkl
+		min-height: 255px
+		margin-top: 30px
+		position: relative
+		margin-bottom: 20px
+		strong
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-top: -50px
+			transform: translateX(-50%)
+			font-size: 40px
+			color: $main-hover
+			font-weight: 100
+		span
+			display: block
+			color: $grey
+			font-size: 16px
+			margin-top: 10px			
+			i
+				color: $main
+				font-size: 22px
+				margin-right: 6px
+
+.btn
+	display: block			
+	width: 150px
+	padding: 5px
+	text-align: center			
+	margin: 10px auto
+	color: $white			
+	transition: all .3s
+	background-color: $main
+.btn-white
+	display: block			
+	width: 150px
+	padding: 5px
+	text-align: center			
+	margin: 10px auto	
+	transition: all .3s
+	color: $main
+	background-color: $white
+#pricing
+	.col-md-4:nth-child(2)
+		.price-wrap
+			background-color: $main			
+			h3
+				// border-bottom: 1px solid $grey-lyght
+			.price,.descr,li
+				color: $white			
+	.price-wrap
+		text-align: center
+		padding-bottom: 20px
+		.title
+			h3
+				text-transform: uppercase
+				color: $white
+				background-color: $main				
+				font-size: 12px
+				padding: 10px
+			.price
+				font-size: 40px
+				line-height: 38px
+				display: block
+				color: $main-hover
+				margin: 30px 0 0
+			.descr
+				color: $grey
+				text-transform: uppercase
+				font-size: 12px
+		ul
+			margin-top: 20px
+			li
+				padding: 7px 0
+				color: $grey
+				position: relative
+				padding-left: 20px				
+				i
+					font-size: 13px
+					margin-right: 5px
+					font-style: normal
+#fast-send
+	padding: 35px 0
+	background-color: $main
+	margin: 40px 0 30px
+	color: $white
+	p
+		font-size: 16px
+	input
+		width: 100%
+		height: 40px
+		border: none
+		border-radius: 3px
+		text-indent: 5px
+		margin-top: 10px
+		border: 1px solid $white
+		background-color: transparent				
+	input::-webkit-input-placeholder
+		color: $white
+	input:-moz-placeholder
+		color: $white
+	button
+		height: 40px
+		border-radius: 3px
+#blog
+	.blog-list
+		ul
+			font-size: 0
+			text-align: center
+			li
+				width: 33.3%
+				font-size: 14px
+				display: inline-block
+				position: relative
+				min-height: 450px
+				overflow: hidden
+				img
+					position: absolute
+					height: 100%
+					min-width: 100%
+					top: 0
+					left: 50%
+					transform: translateX(-50%)
+					transition: top 1.7s
+				&:hover img
+					top: -150px
+				&:nth-child(2):hover img,&:nth-child(5):hover img
+					top: 150px
+				.deskr
+					position: absolute
+					width: 100%
+					height: 150px
+					bottom: 0
+					left: 0
+					&:before
+						position: absolute
+						content: ''
+						left: 50%
+						width: 0
+						height: 0
+						border-style: solid	
+						margin-left: -12px	
+						width: 0;
+						border-width: 0 10px 20px 10px;									
+						top: -20px
+				&:nth-child(even)
+					.deskr
+						background-color: $white
+						color: $main-hover
+						&:before
+							border-color: transparent transparent $white transparent;	
+				&:nth-child(odd)
+					.deskr
+						background-color: $main
+						color: $white
+						&:before
+							border-color: transparent transparent $main transparent;	
+				&:nth-child(2),&:nth-child(5)
+					.deskr
+						bottom: inherit
+						top: 0
+						&:before
+							border-width: 20px 12px 0 12px;
+							border-color: $white transparent transparent transparent;
+							top: 150px!important							
+				&:nth-child(5)
+					.deskr
+						&:before
+							border-color: $main transparent transparent transparent;
+#contac
+	padding-bottom: 0
+	.map.single
+		width: 100%
+		height: 404px
+		margin-top: 120px
+.contact-title
+	font-size: 28px
+	color: $grey
+	padding-left: 5%
+	h2
+		margin: 0
+	p
+		font-size: 16px
+		margin-top: 0
+		margin-bottom: 30px
+#feedback
+	textarea,input
+		width: 90%
+		display: block
+		margin: 10px auto 30px
+		border: 1px solid $grey
+		height: 40px
+		border-radius: 3px
+		text-indent: 10px
+	textarea
+		height: 120px
+	label
+		position: absolute
+		left: 8%
+		display: block
+		transition: margin 0.3s
+		margin-top: 8px
+		color: $main
+
+footer
+	min-height: 400px
+	background-color: $foot-bg
+	position: relative
+	padding-top: 40px
+	color: $white
+	p
+		color: $grey
+		line-height: 22px
+		font-size: 12px
+	a
+		color: $grey
+		&:hover
+			text-decoration: underline
+	.tagcloud
+		a
+			display: inline-block
+			padding: 3px 10px
+			font-size: 14px!important		
+			margin: 2px
+			background-color: #212731
+			&:hover
+				text-decoration: underline
+	ul
+		margin-bottom: 30px
+		li
+			margin-bottom: 10px
+			color: $grey
+	.second-menu
+		text-align: right
+		li
+			display: inline-block
+			margin: 2px
+			a
+				display: block
+				width: 40px
+				height: 40px
+				text-align: center
+				line-height: 40px
+				border: 1px solid $grey-lyght
+				border-radius: 50%
+				transition: all 0.3s
+				&:hover
+					background-color: #212731
+
+	.logo-wrap
+		img
+			width: 60px
+	.copy
+		position: absolute
+		min-height: 50px
+		bottom: 0
+		left: 0
+		width: 100%
+		line-height: 50px
+		color: $main
+		a
+			color: $main
+		.dev 
+			position: absolute
+			right: 0
+			bottom: -45px
+			width: 150px
+			height: 40px
+			padding-left: 24px
+			background-image: url(../img/copy.png)
+			background-repeat: no-repeat
+			background-position: center left
+			line-height: 14px!important
+			background-size: 20px
+			font-size: 10px
+			padding-top: 5px
+			span 
+				display: block
