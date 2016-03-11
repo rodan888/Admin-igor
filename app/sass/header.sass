@@ -86,18 +86,35 @@ header
 					padding: 0 18px;
 					&:hover
 						color: $main-hover
+				&:hover .sub-menu
+					display: block
 				.sub-menu
+					display: none
 					position: absolute
 					width: 200px
 					left: 0
 					border: 1px solid $white
-					text-align: left
+					text-align: left					
 					list-style-type: square
 					list-style-position: inside
+					background-color: rgba(22,130,239, .5)
 					li
 						display: block
+						padding-left: 10px
+						position: relative
+						&:before
+							position: absolute
+							content: ""
+							width: 9px
+							height: 9px
+							border-radius: 50%
+							top: 50%
+							margin-top: -5px
+							left: -9px
+							background-color: $white
 					a
 						line-height: 40px
+						font-size: 14px
 
 	.title-wrap
 		position: absolute
