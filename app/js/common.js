@@ -1,6 +1,8 @@
 jQuery(function() {
 
-	jQuery('header').height(jQuery(window).height());
+	if (jQuery('header').hasClass('home')) {
+		jQuery('header').height(jQuery(window).height());		
+	}
 
 	//SVG Fallback
 	if(!Modernizr.svg) {

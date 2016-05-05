@@ -14,7 +14,10 @@ body
 
 h1,h2,h3,h4
 	font-family: "OpenSansBold"
-
+h1,h2,h3,h4,h5,h6,ul,p
+	margin: 0
+	padding: 0
+	list-style-type: none
 .clrp
 	padding: 0
 a
@@ -23,6 +26,18 @@ a
 
 .hidden
 	display: none
+
+.title
+	font-size: 28px
+	color: #113749
+	position: relative
+
+.slug
+	background-color: $main
+	color: $white
+	display: inline-block
+	padding: 2px 8px
+	border-radius: 3px	
 
 #dot-nav
 	ul
@@ -62,8 +77,20 @@ a
 
 header
 	position: relative
+	min-height: 470px
+	&.home
+		nav
+			background-color: transparent
+			position: relative
 	.nav	
 		text-align: right	
+		z-index: 100
+		background-color: $main
+		position: fixed
+		width: 100%
+		top: 0
+		left: 0
+		box-shadow: 0 1px 2px #333
 		.logo-wrap
 			padding: 5px
 			color: $white
@@ -138,6 +165,35 @@ header
 			&:hover
 				color: $main
 				background-color: $white	
+	.top-img
+		position: absolute
+		width: 100%
+		height: 400px
+		overflow: hidden
+		top: 70px
+		left: 0
+		z-index: -1
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-attachment: fixed
+		background-position: 0 60px
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			min-height: 100%
+			min-width: 100%
+			transform: translate(-50%, -50%)
+			-webkit-transform: translate(-50%, -50%)
+			-moz-transform: translate(-50%, -50%)
+		h1
+			bottom: 0
+			left: 50px
+			position: absolute
+			background-color: $white
+			padding: 10px 20px
+			font-size: 33px
+
 
 .arrow
 	text-align: center
