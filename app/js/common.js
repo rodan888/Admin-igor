@@ -39,6 +39,21 @@ jQuery(function() {
 
 	};
 
+	$("#carousel").owlCarousel({		
+		navigation : true, 
+		slideSpeed : 300,
+		paginationSpeed : 400,		
+		pagination: false,
+		navigationText: [
+      "<i class='icon-chevron-left icon-white'><</i>",
+      "<i class='icon-chevron-right icon-white'>></i>"
+      ],
+		items : 3,
+		itemsDesktop : [1199,2],
+		itemsDesktopSmall : [991,2],			 
+		singleItem:false
+	}); 
+
 	jQuery("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 

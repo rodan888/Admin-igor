@@ -58,6 +58,7 @@ section
 		.sub-title
 			color: $grey
 			font-size: 16px
+			margin-top: 20px
 
 .about-block
 	text-align: center
@@ -550,3 +551,50 @@ footer
 				font-size: 30px
 				height: 20px
 				line-height: 35px
+#carousel
+	padding: 40px 0
+	.item
+		padding: 0 20px
+		height: 400px
+		overflow: hidden
+		position: relative
+		border-radius: 0 0 5px 5px
+		img
+			min-width: 100%
+			max-width: 340px
+			min-height: 250px
+		.deskr
+			position: absolute
+			bottom: 0
+			left: 20px
+			background-color: $white
+			width: calc(100% - 40px)
+			width: -moz-calc(100% - 40px)
+			width: -webkit-calc(100% - 40px)
+			height: 150px
+			padding: 5px
+			border: 1px solid $main
+			border-top: none
+	.owl-buttons
+		div
+			top: 50%	
+			width: 100px
+			height: 100px
+			line-height: 100px
+			border-radius: 50%
+			transition: all 0.3s
+			background-color: $white
+			margin-top: -50px			
+			&:hover
+				background-color: $main		
+				i
+					color: $white
+			i
+				font-family: serif
+				color: $main
+		.owl-next
+			right: -45px
+			border-left: 1px solid $main
+		.owl-prev
+			border-right: 1px solid $main
+			left: -45px
