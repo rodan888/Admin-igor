@@ -86,7 +86,7 @@ section
 		height: 1px
 		background-color: $grey-lyght
 	&:after
-		bottom: 81px
+		bottom: 40px
 		top: inherit
 
 	.section-title
@@ -141,9 +141,32 @@ section
 			display: block		
 		.img-wrap
 			text-align: center
+			overflow: hidden
+			position: relative
+			width: 470px
+			height: 330px
+			margin: 0 auto
+			z-index: 10
+			border-radius: 25px
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				background-image: url("../img/mon.png")
+				background-repeat: no-repeat
+				background-position: bottom center
+				background-size: 470px
+				width: 100%
+				height: 100%
 			img
 				width: 100%
-				max-width: 500px
+				max-width: 470px
+				position: absolute
+				bottom: 50px
+				left: 0				
+				z-index: -1	
+				border-radius: 20px	
 
 .phase
 	padding-left: 15px
@@ -164,8 +187,8 @@ section
 .phase > div
 	display: inline-block
 	vertical-align: top
-	width: 32.5%
-	min-height: 250px
+	width: 32.5%	
+	min-height: 398px
 	text-align: center
 	border-right: 1px solid $grey-lyght
 	&:last-child
